@@ -59,3 +59,15 @@ main #icons div i {
 main #icons div h4 {
   text-transform: uppercase;
 }
+
+.blue {
+  color: #0000FF;
+}
+
+.orange {
+  color: #FFA500;
+}
+
+.purple {
+  color: #800080;
+}

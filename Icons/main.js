@@ -101,3 +101,21 @@ const icons = [
 icons.forEach((item) => {
   $('#icons').append(`<div><i class = "${item.family} ${item.prefix}${item.name}"></i><h4>${item.name}</h4></div>`)
 });
+
+
+// MILESTONE 2
+const colors = ['blue', 'orange', 'purple'];
+icons.forEach((item, i) => {
+  if (item.type == 'animal') {
+    $('#icons div').eq(i).children('i').addClass(colors[0]);
+  } else if (item.type == 'vegetable') {
+    $('#icons div').eq(i).children('i').addClass(colors[1]);
+  } else {
+    $('#icons div').eq(i).children('i').addClass(colors[2]);
+  }
+});
+
+// const animals = icons.filter((item) => item.type == 'animal');
+// animals.forEach((item) => {
+//
+// });
