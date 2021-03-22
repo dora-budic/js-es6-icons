@@ -107,15 +107,28 @@ icons.forEach((item) => {
 const colors = ['blue', 'orange', 'purple'];
 icons.forEach((item, i) => {
   if (item.type == 'animal') {
-    $('#icons div').eq(i).children('i').addClass(colors[0]);
+    $('#icons div').eq(i).addClass(colors[0]);
   } else if (item.type == 'vegetable') {
-    $('#icons div').eq(i).children('i').addClass(colors[1]);
+    $('#icons div').eq(i).addClass(colors[1]);
   } else {
-    $('#icons div').eq(i).children('i').addClass(colors[2]);
+    $('#icons div').eq(i).addClass(colors[2]);
   }
 });
 
-// const animals = icons.filter((item) => item.type == 'animal');
-// animals.forEach((item) => {
-//
-// });
+
+let select = $('.filter select');
+select.click(() => {
+  let value = select.val();
+  if (value == 'animal') {
+    $('#icons div.blue').show();
+    $('#icons div.orange, #icons div.purple').hide();
+  } else if (value == 'vegetable') {
+    $('#icons div.orange').show();
+    $('#icons div.blue, #icons div.purple').hide();
+  } else if (value == 'user') {
+    $('#icons div.purple').show();
+    $('#icons div.blue, #icons div.orange').hide();
+  } else {
+    $('#icons div').show();
+  }
+});

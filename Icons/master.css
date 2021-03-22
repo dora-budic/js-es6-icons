@@ -13,6 +13,11 @@ header {
   color: #29B1DD;
 }
 
+main {
+  min-height: calc(100vh - 57px);
+  background-color: #DDDDDD;
+}
+
 main .filter {
   background-color: #29B1DD;
   height: 80px;
@@ -32,7 +37,6 @@ main .filter select {
 }
 
 main #icons {
-  background-color: #DDDDDD;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -60,14 +64,14 @@ main #icons div h4 {
   text-transform: uppercase;
 }
 
-.blue {
+.blue i {
   color: #0000FF;
 }
 
-.orange {
+.orange i {
   color: #FFA500;
 }
 
-.purple {
+.purple i {
   color: #800080;
 }
